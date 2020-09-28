@@ -27,6 +27,7 @@ lm = LoginManager(app)
 class User(UserMixin, db.Model):
     """User model."""
     __tablename__ = 'users'
+    # get userid
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True)
     password_hash = db.Column(db.String(128))
